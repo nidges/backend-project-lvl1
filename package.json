@@ -1,0 +1,20 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "first hexlet backend project - brain games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nidges/backend-project-lvl1.git"
+  },
+  "author": "nidges",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nidges/backend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/nidges/backend-project-lvl1#readme"
+}
