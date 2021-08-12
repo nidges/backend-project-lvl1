@@ -2,14 +2,14 @@ name: linter
 
 on:
   push:
-    branches: [ $default-branch ]
+    branches: [ main ]
   pull_request:
-    branches: [ $default-branch ]
+    branches: [ main ]
 
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - name: npm install
-        run: make install
-      - name: linter
-        run: make lint
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test
+      - run: make lint
