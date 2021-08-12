@@ -3,3 +3,6 @@
 
 ### CodeClimate Maintainability:
 [![Maintainability](https://api.codeclimate.com/v1/badges/70f28cf06c690228a521/maintainability)](https://codeclimate.com/github/nidges/backend-project-lvl1/maintainability)
+
+### Actions linter status
+![linter](https://github.com/nidges/backend-project-lvl1/actions/workflows/linter/badge.svg)
