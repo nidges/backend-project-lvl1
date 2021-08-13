@@ -6,3 +6,6 @@
 
 ### Actions linter status
 [![linter](https://github.com/nidges/backend-project-lvl1/actions/workflows/linter-workflow.yml/badge.svg)](https://github.com/nidges/backend-project-lvl1/actions/workflows/linter-workflow.yml)
+
+### brain-even
+[![asciicast](https://asciinema.org/a/8JXQgjU1YPgyqgLd1jly4orUL.svg)](https://asciinema.org/a/8JXQgjU1YPgyqgLd1jly4orUL)
