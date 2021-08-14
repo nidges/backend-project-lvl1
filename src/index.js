@@ -1,4 +1,4 @@
-//some sentences aren't stylistically correct
+// some sentences aren't stylistically correct
 
 import readlineSync from 'readline-sync';
 
