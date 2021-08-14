@@ -1,6 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "type": "module",
   "description": "first hexlet backend project - brain games",
   "main": "index.js",
