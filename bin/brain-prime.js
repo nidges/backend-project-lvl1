@@ -2,7 +2,7 @@
 
 import getName from '../src/cli.js';
 import isUserWinning from '../src/index.js';
-import { getRandomNumber, isPrime } from '../src/games/prime-game.js';
+import { generateQuestion, calculateCorrectAnswer } from '../src/games/prime.js';
 import sayFarewell from '../src/farewell.js';
 
 console.log('Welcome to the Brain Games!');
@@ -13,6 +13,6 @@ console.log(`Hello, ${userName}`);
 
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
-const win = isUserWinning(getRandomNumber, isPrime);
+const win = isUserWinning(generateQuestion, calculateCorrectAnswer);
 
 sayFarewell(win, userName);

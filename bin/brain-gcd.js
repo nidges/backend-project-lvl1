@@ -2,7 +2,7 @@
 
 import getName from '../src/cli.js';
 import isUserWinning from '../src/index.js';
-import { getRandomPair, getGCD } from '../src/games/gcd-game.js';
+import { generateQuestion, calculateCorrectAnswer } from '../src/games/gcd.js';
 import sayFarewell from '../src/farewell.js';
 
 console.log('Welcome to the Brain Games!');
@@ -13,6 +13,6 @@ console.log(`Hello, ${userName}`);
 
 console.log('Find the greatest common divisor of given numbers.');
 
-const win = isUserWinning(getRandomPair, getGCD);
+const win = isUserWinning(generateQuestion, calculateCorrectAnswer);
 
 sayFarewell(win, userName);

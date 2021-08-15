@@ -2,7 +2,7 @@
 
 import getName from '../src/cli.js';
 import isUserWinning from '../src/index.js';
-import { getRandomExpression, expressionResult } from '../src/games/calc-game.js';
+import { generateQuestion, calculateCorrectAnswer } from '../src/games/calc.js';
 import sayFarewell from '../src/farewell.js';
 
 console.log('Welcome to the Brain Games!');
@@ -13,6 +13,6 @@ console.log(`Hello, ${userName}`);
 
 console.log('What is the result of the expression?');
 
-const win = isUserWinning(getRandomExpression, expressionResult);
+const win = isUserWinning(generateQuestion, calculateCorrectAnswer);
 
 sayFarewell(win, userName);

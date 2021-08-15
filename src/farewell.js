@@ -1,4 +1,4 @@
-export default (result, name) => {
-  if (result) console.log(`Congratulations, ${name}!`);
-  else console.log(`Let's try again, ${name}!`);
+export default (isItAWin, userName) => {
+  if (isItAWin) console.log(`Congratulations, ${userName}!`);
+  else console.log(`Let's try again, ${userName}!`);
 };
