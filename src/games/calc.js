@@ -1,8 +1,7 @@
-import _ from 'lodash';
-
 export const generateQuestion = () => {
   const operators = ['+', '-', '*'];
-  const operator = _.sample(operators);
+  const randomOperatorIndex = Math.floor(Math.random() * 3);
+  const operator = operators[randomOperatorIndex];
 
   // max random number will be 29, so that expressions won't be too difficult
   const firstOperand = Math.floor(Math.random() * 30);
