@@ -8,9 +8,8 @@ export default (gameData) => {
 
   console.log(`Hello, ${userName}`);
   console.log(gameData.greeting);
-  let i = 0;
 
-  while (i < 3) {
+  for (let i = 0; i < 3; i += 1) {
     const roundData = gameData.roundData();
     const randomQuestion = roundData.question;
     console.log(`Question: ${randomQuestion}`);
@@ -18,7 +17,6 @@ export default (gameData) => {
     const correctAnswer = roundData.answer;
 
     if (correctAnswer === userAnswer) {
-      i += 1;
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
