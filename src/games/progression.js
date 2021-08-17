@@ -1,17 +1,16 @@
 import wrapDataInAGame from '../index.js';
+import getRandomIntFromTo from '../utils.js';
 
 const generateProgressionData = () => {
   const greeting = 'What number is missing in the progression?';
 
   const roundData = () => {
-    // number of elements must be between 5 & 10 including both
-    const numberOfProgressionElements = Math.floor(Math.random() * 6) + 5;
+    const numberOfProgressionElements = getRandomIntFromTo(5, 10);
 
-    // 5 so it wouldn't be too difficult to count. '+1' is needed for it not to be zero
-    const progressionBase = Math.floor(Math.random() * 5) + 1;
+    // 5 so it wouldn't be too difficult to count.
+    const progressionBase = getRandomIntFromTo(1, 5);
 
-    // first element is an integer from 0 to 100 including both
-    const firstElement = Math.floor(Math.random() * 101);
+    const firstElement = getRandomIntFromTo(0, 100);
 
     const progressionNumbers = [firstElement];
 
@@ -19,7 +18,7 @@ const generateProgressionData = () => {
       progressionNumbers.push(progressionNumbers[i - 1] + progressionBase);
     }
 
-    const randomMissingElementIndex = Math.floor(Math.random() * (numberOfProgressionElements - 1));
+    const randomMissingElementIndex = getRandomIntFromTo(0, numberOfProgressionElements - 1);
 
     const answer = String(progressionNumbers[randomMissingElementIndex]);
 

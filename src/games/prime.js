@@ -1,10 +1,11 @@
 import wrapDataInAGame from '../index.js';
+import getRandomIntFromTo from '../utils.js';
 
 const generatePrimeData = () => {
   const greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const roundData = () => {
-    const question = Math.floor(Math.random() * 100);
+    const question = getRandomIntFromTo(0, 100);
 
     let answer = 'yes';
 

@@ -1,10 +1,11 @@
 import wrapDataInAGame from '../index.js';
+import getRandomIntFromTo from '../utils.js';
 
 const generateEvenData = () => {
   const greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const roundData = () => {
-    const question = Math.floor(Math.random() * 100);
+    const question = getRandomIntFromTo(0, 100);
 
     const answer = (question % 2 === 0) ? 'yes' : 'no';
 

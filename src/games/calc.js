@@ -1,14 +1,15 @@
 import wrapDataInAGame from '../index.js';
+import getRandomIntFromTo from '../utils.js';
 
 const generateCalcData = () => {
   const greeting = 'What is the result of the expression?';
 
   const roundData = () => {
     const operators = ['+', '-', '*'];
-    const randomOperatorIndex = Math.floor(Math.random() * 3);
+    const randomOperatorIndex = getRandomIntFromTo(0, 2);
     const operator = operators[randomOperatorIndex];
-    const firstOperand = Math.floor(Math.random() * 31);
-    const secondOperand = Math.floor(Math.random() * 31);
+    const firstOperand = getRandomIntFromTo(0, 30);
+    const secondOperand = getRandomIntFromTo(0, 30);
     const question = `${firstOperand} ${operator} ${secondOperand}`;
 
     let answer;
