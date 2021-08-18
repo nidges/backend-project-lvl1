@@ -23,9 +23,9 @@ const calcAnswer = (firstOperand, operator, secondOperand) => {
   return String(answer);
 }
 
-const generateCalcData = () => {
+// const generateCalcData = () => {
 
-  const getRoundData = () => {
+  const generateRoundData = () => {
     const operators = ['+', '-', '*'];
     const randomOperatorIndex = getRandomInt(0, operators.length - 1);
     const operator = operators[randomOperatorIndex];
@@ -38,11 +38,11 @@ const generateCalcData = () => {
     return { question, answer };
   };
 
-  return getRoundData;
-};
+//   return getRoundData;
+// };
 
 export default () => {
-  gameEngine(generateCalcData(), description);
+  gameEngine(generateRoundData, description);
 };
 
 // export const generateQuestion = () => {

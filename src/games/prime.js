@@ -14,8 +14,8 @@ const isPrime = (number) => {
   return true;
 }
 
-const generatePrimeData = () => {
-  const getRoundData = () => {
+// const generatePrimeData = () => {
+  const generateRoundData = () => {
     const question = getRandomInt(0, 100);
 
     const answer = isPrime(question) ? 'yes' : 'no';
@@ -23,11 +23,11 @@ const generatePrimeData = () => {
     return { question, answer };
   };
 
-  return getRoundData;
-};
+//   return getRoundData;
+// };
 
 export default () => {
-  gameEngine(generatePrimeData(), description);
+  gameEngine(generateRoundData, description);
 };
 
 // export const generateQuestion = () => Math.floor(Math.random() * 100);

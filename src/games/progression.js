@@ -3,8 +3,8 @@ import getRandomInt from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
-const generateProgressionData = () => {
-  const getRoundData = () => {
+// const generateProgressionData = () => {
+  const generateRoundData = () => {
     const numberOfProgressionElements = getRandomInt(5, 10);
 
     // 5 so it wouldn't be too difficult to count.
@@ -29,11 +29,11 @@ const generateProgressionData = () => {
     return { question, answer };
   };
 
-  return getRoundData;
-};
+//   return getRoundData;
+// };
 
 export default () => {
-  gameEngine(generateProgressionData(), description);
+  gameEngine(generateRoundData, description);
 };
 //
 // const calculateCorrectAnswer = (string) => {

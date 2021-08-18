@@ -7,8 +7,8 @@ const isEven = (number) => {
   return (number % 2 === 0);
 }
 
-const generateEvenData = () => {
-  const getRoundData = () => {
+// const generateRoundData = () => {
+  const generateRoundData = () => {
     const question = getRandomInt(0, 100);
 
     const answer = isEven(question) ? 'yes' : 'no';
@@ -16,11 +16,11 @@ const generateEvenData = () => {
     return { question, answer };
   };
 
-  return getRoundData;
-};
+//   return getRoundData;
+// };
 
 export default () => {
-  gameEngine(generateEvenData(), description);
+  gameEngine(generateRoundData, description);
 };
 
 // export const generateQuestion = () => Math.floor(Math.random() * 100);
