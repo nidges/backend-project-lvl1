@@ -1,4 +1,4 @@
-import wrapDataInAGame from '../index.js';
+import gameEngine from '../index.js';
 import getRandomIntFromTo from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -24,7 +24,7 @@ const generateGCDData = () => {
 };
 
 export default () => {
-  wrapDataInAGame(generateGCDData(), description);
+  gameEngine(generateGCDData(), description);
 };
 
 // export const generateQuestion = () => {

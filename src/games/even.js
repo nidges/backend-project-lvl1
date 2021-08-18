@@ -1,4 +1,4 @@
-import wrapDataInAGame from '../index.js';
+import gameEngine from '../index.js';
 import getRandomIntFromTo from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -16,7 +16,7 @@ const generateEvenData = () => {
 };
 
 export default () => {
-  wrapDataInAGame(generateEvenData(), description);
+  gameEngine(generateEvenData(), description);
 };
 
 // export const generateQuestion = () => Math.floor(Math.random() * 100);

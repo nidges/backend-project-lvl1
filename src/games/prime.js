@@ -1,4 +1,4 @@
-import wrapDataInAGame from '../index.js';
+import gameEngine from '../index.js';
 import getRandomIntFromTo from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -25,7 +25,7 @@ const generatePrimeData = () => {
 };
 
 export default () => {
-  wrapDataInAGame(generatePrimeData(), description);
+  gameEngine(generatePrimeData(), description);
 };
 
 // export const generateQuestion = () => Math.floor(Math.random() * 100);

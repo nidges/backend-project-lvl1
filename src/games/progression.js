@@ -1,4 +1,4 @@
-import wrapDataInAGame from '../index.js';
+import gameEngine from '../index.js';
 import getRandomIntFromTo from '../utils.js';
 
 const description = 'What number is missing in the progression?';
@@ -33,7 +33,7 @@ const generateProgressionData = () => {
 };
 
 export default () => {
-  wrapDataInAGame(generateProgressionData(), description);
+  gameEngine(generateProgressionData(), description);
 };
 //
 // const calculateCorrectAnswer = (string) => {

@@ -1,4 +1,4 @@
-import wrapDataInAGame from '../index.js';
+import gameEngine from '../index.js';
 import getRandomIntFromTo from '../utils.js';
 
 const description = 'What is the result of the expression?';
@@ -42,7 +42,7 @@ const generateCalcData = () => {
 };
 
 export default () => {
-  wrapDataInAGame(generateCalcData(), description);
+  gameEngine(generateCalcData(), description);
 };
 
 // export const generateQuestion = () => {
