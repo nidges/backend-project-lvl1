@@ -1,11 +1,11 @@
 import gameEngine from '../index.js';
-import getRandomIntFromTo from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generatePrimeData = () => {
   const roundData = () => {
-    const question = getRandomIntFromTo(0, 100);
+    const question = getRandomInt(0, 100);
 
     let answer = 'yes';
 

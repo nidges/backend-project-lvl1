@@ -1,12 +1,12 @@
 import gameEngine from '../index.js';
-import getRandomIntFromTo from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
 const generateGCDData = () => {
   const roundData = () => {
-    let firstNumber = getRandomIntFromTo(0, 100);
-    let secondNumber = getRandomIntFromTo(0, 100);
+    let firstNumber = getRandomInt(0, 100);
+    let secondNumber = getRandomInt(0, 100);
     const question = `${firstNumber} ${secondNumber}`;
 
     while (secondNumber) {

@@ -1,11 +1,11 @@
 import gameEngine from '../index.js';
-import getRandomIntFromTo from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const generateEvenData = () => {
   const roundData = () => {
-    const question = getRandomIntFromTo(0, 100);
+    const question = getRandomInt(0, 100);
 
     const answer = (question % 2 === 0) ? 'yes' : 'no';
 

@@ -1,16 +1,16 @@
 import gameEngine from '../index.js';
-import getRandomIntFromTo from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
 const generateProgressionData = () => {
   const roundData = () => {
-    const numberOfProgressionElements = getRandomIntFromTo(5, 10);
+    const numberOfProgressionElements = getRandomInt(5, 10);
 
     // 5 so it wouldn't be too difficult to count.
-    const progressionBase = getRandomIntFromTo(1, 5);
+    const progressionBase = getRandomInt(1, 5);
 
-    const firstElement = getRandomIntFromTo(0, 100);
+    const firstElement = getRandomInt(0, 100);
 
     const progressionNumbers = [firstElement];
 
@@ -18,7 +18,7 @@ const generateProgressionData = () => {
       progressionNumbers.push(progressionNumbers[i - 1] + progressionBase);
     }
 
-    const randomMissingElementIndex = getRandomIntFromTo(0, numberOfProgressionElements - 1);
+    const randomMissingElementIndex = getRandomInt(0, numberOfProgressionElements - 1);
 
     const answer = String(progressionNumbers[randomMissingElementIndex]);
 

@@ -1,5 +1,5 @@
 import gameEngine from '../index.js';
-import getRandomIntFromTo from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
@@ -27,10 +27,10 @@ const generateCalcData = () => {
 
   const roundData = () => {
     const operators = ['+', '-', '*'];
-    const randomOperatorIndex = getRandomIntFromTo(0, operators.length - 1);
+    const randomOperatorIndex = getRandomInt(0, operators.length - 1);
     const operator = operators[randomOperatorIndex];
-    const firstOperand = getRandomIntFromTo(0, 30);
-    const secondOperand = getRandomIntFromTo(0, 30);
+    const firstOperand = getRandomInt(0, 30);
+    const secondOperand = getRandomInt(0, 30);
     const question = `${firstOperand} ${operator} ${secondOperand}`;
 
     const answer = calcAnswer(firstOperand, operator, secondOperand);
