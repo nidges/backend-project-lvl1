@@ -1,9 +1,9 @@
 import wrapDataInAGame from '../index.js';
 import getRandomIntFromTo from '../utils.js';
 
-const generateGCDData = () => {
-  const greeting = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 
+const generateGCDData = () => {
   const roundData = () => {
     let firstNumber = getRandomIntFromTo(0, 100);
     let secondNumber = getRandomIntFromTo(0, 100);
@@ -20,13 +20,11 @@ const generateGCDData = () => {
     return { question, answer };
   };
 
-  const gameData = { greeting, roundData };
-
-  return gameData;
+  return roundData;
 };
 
 export default () => {
-  wrapDataInAGame(generateGCDData());
+  wrapDataInAGame(generateGCDData(), description);
 };
 
 // export const generateQuestion = () => {

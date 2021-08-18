@@ -1,9 +1,9 @@
 import wrapDataInAGame from '../index.js';
 import getRandomIntFromTo from '../utils.js';
 
-const generateEvenData = () => {
-  const greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const generateEvenData = () => {
   const roundData = () => {
     const question = getRandomIntFromTo(0, 100);
 
@@ -12,13 +12,11 @@ const generateEvenData = () => {
     return { question, answer };
   };
 
-  const gameData = { greeting, roundData };
-
-  return gameData;
+  return roundData;
 };
 
 export default () => {
-  wrapDataInAGame(generateEvenData());
+  wrapDataInAGame(generateEvenData(), description);
 };
 
 // export const generateQuestion = () => Math.floor(Math.random() * 100);

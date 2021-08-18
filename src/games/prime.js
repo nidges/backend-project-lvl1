@@ -1,9 +1,9 @@
 import wrapDataInAGame from '../index.js';
 import getRandomIntFromTo from '../utils.js';
 
-const generatePrimeData = () => {
-  const greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
+const generatePrimeData = () => {
   const roundData = () => {
     const question = getRandomIntFromTo(0, 100);
 
@@ -21,13 +21,11 @@ const generatePrimeData = () => {
     return { question, answer };
   };
 
-  const gameData = { greeting, roundData };
-
-  return gameData;
+  return roundData;
 };
 
 export default () => {
-  wrapDataInAGame(generatePrimeData());
+  wrapDataInAGame(generatePrimeData(), description);
 };
 
 // export const generateQuestion = () => Math.floor(Math.random() * 100);

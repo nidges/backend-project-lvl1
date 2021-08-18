@@ -1,9 +1,9 @@
 import wrapDataInAGame from '../index.js';
 import getRandomIntFromTo from '../utils.js';
 
-const generateProgressionData = () => {
-  const greeting = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
+const generateProgressionData = () => {
   const roundData = () => {
     const numberOfProgressionElements = getRandomIntFromTo(5, 10);
 
@@ -29,13 +29,11 @@ const generateProgressionData = () => {
     return { question, answer };
   };
 
-  const gameData = { greeting, roundData };
-
-  return gameData;
+  return roundData;
 };
 
 export default () => {
-  wrapDataInAGame(generateProgressionData());
+  wrapDataInAGame(generateProgressionData(), description);
 };
 //
 // const calculateCorrectAnswer = (string) => {

@@ -17,6 +17,6 @@
 //
 // sayFarewell(win, userName);
 
-import play from "../src/games/progression";
+import play from "../src/games/gcd.js";
 
 play();

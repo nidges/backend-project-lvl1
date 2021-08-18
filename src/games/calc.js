@@ -1,6 +1,8 @@
 import wrapDataInAGame from '../index.js';
 import getRandomIntFromTo from '../utils.js';
 
+const description = 'What is the result of the expression?';
+
 const calcAnswer = (firstOperand, operator, secondOperand) => {
   let answer;
 
@@ -22,7 +24,6 @@ const calcAnswer = (firstOperand, operator, secondOperand) => {
 }
 
 const generateCalcData = () => {
-  const greeting = 'What is the result of the expression?';
 
   const roundData = () => {
     const operators = ['+', '-', '*'];
@@ -37,13 +38,11 @@ const generateCalcData = () => {
     return { question, answer };
   };
 
-  const gameData = { greeting, roundData };
-
-  return gameData;
+  return roundData;
 };
 
 export default () => {
-  wrapDataInAGame(generateCalcData());
+  wrapDataInAGame(generateCalcData(), description);
 };
 
 // export const generateQuestion = () => {
