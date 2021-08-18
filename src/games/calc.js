@@ -4,7 +4,7 @@ import getRandomInt from '../utils.js';
 const description = 'What is the result of the expression?';
 
 const calculate = (firstOperand, operator, secondOperand) => {
- switch (operator) {
+  switch (operator) {
     case '+':
       return firstOperand + secondOperand;
     case '-':
@@ -14,6 +14,7 @@ const calculate = (firstOperand, operator, secondOperand) => {
     default:
       break;
   }
+  return null;
 };
 
 const generateRoundData = () => {
