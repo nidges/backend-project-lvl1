@@ -6,7 +6,7 @@ const description = 'Answer "yes" if given number is prime. Otherwise answer "no
 const isPrime = (number) => {
   let i = 2;
 
-  while (i < number) {
+  while (i <= Math.sqrt(number)) {
     if (number % i === 0) return false;
     i += 1;
   }

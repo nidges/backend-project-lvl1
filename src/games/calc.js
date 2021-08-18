@@ -3,24 +3,17 @@ import getRandomInt from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
-const calcAnswer = (firstOperand, operator, secondOperand) => {
-  let answer;
-
-  switch (operator) {
+const calculate = (firstOperand, operator, secondOperand) => {
+ switch (operator) {
     case '+':
-      answer = firstOperand + secondOperand;
-      break;
+      return firstOperand + secondOperand;
     case '-':
-      answer = firstOperand - secondOperand;
-      break;
+      return firstOperand - secondOperand;
     case '*':
-      answer = firstOperand * secondOperand;
-      break;
+      return firstOperand * secondOperand;
     default:
       break;
   }
-
-  return String(answer);
 };
 
 const generateRoundData = () => {
@@ -32,7 +25,7 @@ const generateRoundData = () => {
 
   const question = `${firstOperand} ${operator} ${secondOperand}`;
 
-  const answer = calcAnswer(firstOperand, operator, secondOperand);
+  const answer = String(calculate(firstOperand, operator, secondOperand));
 
   return { question, answer };
 };
