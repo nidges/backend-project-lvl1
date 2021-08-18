@@ -3,64 +3,32 @@ import getRandomInt from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
-const generateProgression = (numberOfProgressionElements, progressionBase, firstElement) => {
+const generateProgression = (numberOfElements, progressionBase, firstElement) => {
   const progressionNumbers = [firstElement];
 
-  for (let i = 1; i < numberOfProgressionElements; i += 1) {
+  for (let i = 1; i < numberOfElements; i += 1) {
     progressionNumbers.push(firstElement + i * progressionBase);
   }
 
   return progressionNumbers;
-}
+};
 
-// const generateProgressionData = () => {
-  const generateRoundData = () => {
-    const numberOfProgressionElements = getRandomInt(5, 10);
+const generateRoundData = () => {
+  const numberOfElements = getRandomInt(5, 10);
+  const progressionBase = getRandomInt(1, 5);
+  const firstElement = getRandomInt(0, 100);
+  const progressionNumbers = generateProgression(numberOfElements, progressionBase, firstElement);
+  const randomMissingElementIndex = getRandomInt(0, numberOfElements - 1);
 
-    // 5 so it wouldn't be too difficult to count.
-    const progressionBase = getRandomInt(1, 5);
+  const answer = String(progressionNumbers[randomMissingElementIndex]);
 
-    const firstElement = getRandomInt(0, 100);
+  progressionNumbers[randomMissingElementIndex] = '..';
 
-    const progressionNumbers = generateProgression(numberOfProgressionElements, progressionBase, firstElement);
+  const question = progressionNumbers.join(' ');
 
-    // const progressionNumbers = [firstElement];
-    //
-    // for (let i = 1; i < numberOfProgressionElements; i += 1) {
-    //   progressionNumbers.push(progressionNumbers[i - 1] + progressionBase);
-    // }
-
-    const randomMissingElementIndex = getRandomInt(0, numberOfProgressionElements - 1);
-
-    const answer = String(progressionNumbers[randomMissingElementIndex]);
-
-    progressionNumbers[randomMissingElementIndex] = '..';
-
-    const question = progressionNumbers.join(' ');
-
-    return { question, answer };
-  };
-
-//   return getRoundData;
-// };
+  return { question, answer };
+};
 
 export default () => {
   gameEngine(generateRoundData, description);
 };
-//
-// const calculateCorrectAnswer = (string) => {
-//   const progressionElements = string.split(' ');
-//   const missingElementIndex = progressionElements.indexOf('..');
-//   let progressionBase;
-//
-//   if (missingElementIndex > 1) {
-//     // two first elements are used to find the base of progression
-//     progressionBase = Number(progressionElements[1]) - Number(progressionElements[0]);
-//     // and it guarantees that the missing element has an identified element to the left
-//     return String(Number(progressionElements[missingElementIndex - 1]) + progressionBase);
-//   }
-//   // otherwise if the missing element is somewhere in the beginning, it's either first or second
-//   progressionBase = Number(progressionElements[3]) - Number(progressionElements[2]);
-//   // it guarantees that the missing element has a neighbour to the right
-//   return String(Number(progressionElements[missingElementIndex + 1]) - progressionBase);
-// };
