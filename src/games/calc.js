@@ -26,7 +26,7 @@ const generateCalcData = () => {
 
   const roundData = () => {
     const operators = ['+', '-', '*'];
-    const randomOperatorIndex = getRandomIntFromTo(0, 2);
+    const randomOperatorIndex = getRandomIntFromTo(0, operators.length - 1);
     const operator = operators[randomOperatorIndex];
     const firstOperand = getRandomIntFromTo(0, 30);
     const secondOperand = getRandomIntFromTo(0, 30);
