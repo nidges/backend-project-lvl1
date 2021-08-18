@@ -17,6 +17,6 @@
 //
 // sayFarewell(win, userName);
 
-import letsPlay from '../src/games/gcd.js';
+import play from "../src/games/progression";
 
-letsPlay();
+play();

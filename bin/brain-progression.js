@@ -17,6 +17,6 @@
 //
 // sayFarewell(isItAWin, userName);
 
-import letsPlay from '../src/games/progression.js';
+import play from '../src/games/progression.js';
 
-letsPlay();
+play();

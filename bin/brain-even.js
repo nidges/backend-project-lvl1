@@ -17,6 +17,6 @@
 //
 // sayFarewell(win, userName);
 
-import letsPlay from '../src/games/even.js';
+import play from '../src/games/even.js';
 
-letsPlay();
+play();

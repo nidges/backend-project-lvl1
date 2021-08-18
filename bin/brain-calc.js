@@ -17,6 +17,6 @@
 //
 // sayFarewell(win, userName);
 
-import letsPlay from '../src/games/calc.js';
+import play from '../src/games/calc.js';
 
-letsPlay();
+play();

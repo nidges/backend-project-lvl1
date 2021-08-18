@@ -17,6 +17,6 @@
 //
 // sayFarewell(win, userName);
 
-import letsPlay from '../src/games/prime.js';
+import play from '../src/games/prime.js';
 
-letsPlay();
+play();
