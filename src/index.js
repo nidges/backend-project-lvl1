@@ -9,10 +9,11 @@ export default (gameData) => {
 
   for (let i = 0; i < 3; i += 1) {
     const roundData = gameData.roundData();
-    const randomQuestion = roundData.question;
+    const { question: randomQuestion, answer: correctAnswer } = roundData;
+    // const randomQuestion = roundData.question;
     console.log(`Question: ${randomQuestion}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const correctAnswer = roundData.answer;
+    // const correctAnswer = roundData.answer;
 
     if (correctAnswer === userAnswer) {
       console.log('Correct!');
