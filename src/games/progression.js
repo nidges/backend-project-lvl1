@@ -3,6 +3,16 @@ import getRandomInt from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
+const generateProgression = (numberOfProgressionElements, progressionBase, firstElement) => {
+  const progressionNumbers = [firstElement];
+
+  for (let i = 1; i < numberOfProgressionElements; i += 1) {
+    progressionNumbers.push(firstElement + i * progressionBase);
+  }
+
+  return progressionNumbers;
+}
+
 // const generateProgressionData = () => {
   const generateRoundData = () => {
     const numberOfProgressionElements = getRandomInt(5, 10);
@@ -12,11 +22,13 @@ const description = 'What number is missing in the progression?';
 
     const firstElement = getRandomInt(0, 100);
 
-    const progressionNumbers = [firstElement];
+    const progressionNumbers = generateProgression(numberOfProgressionElements, progressionBase, firstElement);
 
-    for (let i = 1; i < numberOfProgressionElements; i += 1) {
-      progressionNumbers.push(progressionNumbers[i - 1] + progressionBase);
-    }
+    // const progressionNumbers = [firstElement];
+    //
+    // for (let i = 1; i < numberOfProgressionElements; i += 1) {
+    //   progressionNumbers.push(progressionNumbers[i - 1] + progressionBase);
+    // }
 
     const randomMissingElementIndex = getRandomInt(0, numberOfProgressionElements - 1);
 
