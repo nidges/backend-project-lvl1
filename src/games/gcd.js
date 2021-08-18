@@ -4,8 +4,10 @@ import getRandomInt from '../utils.js';
 const description = 'Find the greatest common divisor of given numbers.';
 
 const findGCD = (firstNumber, secondNumber) => {
-
-}
+  const modulo = firstNumber % secondNumber;
+  if (modulo === 0) return secondNumber;
+  return findGCD(secondNumber, modulo);
+ }
 
 // const generateGCDData = () => {
   const generateRoundData = () => {
@@ -13,13 +15,13 @@ const findGCD = (firstNumber, secondNumber) => {
     let secondNumber = getRandomInt(0, 100);
     const question = `${firstNumber} ${secondNumber}`;
 
-    while (secondNumber) {
-      const buffer = secondNumber;
-      secondNumber = firstNumber % secondNumber;
-      firstNumber = buffer;
-    }
+    // while (secondNumber) {
+    //   const buffer = secondNumber;
+    //   secondNumber = firstNumber % secondNumber;
+    //   firstNumber = buffer;
+    // }
 
-    const answer = String(firstNumber);
+    const answer = String(findGCD(firstNumber, secondNumber));
 
     return { question, answer };
   };
