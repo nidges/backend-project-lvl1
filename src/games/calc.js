@@ -25,7 +25,7 @@ const calcAnswer = (firstOperand, operator, secondOperand) => {
 
 const generateCalcData = () => {
 
-  const roundData = () => {
+  const getRoundData = () => {
     const operators = ['+', '-', '*'];
     const randomOperatorIndex = getRandomInt(0, operators.length - 1);
     const operator = operators[randomOperatorIndex];
@@ -38,7 +38,7 @@ const generateCalcData = () => {
     return { question, answer };
   };
 
-  return roundData;
+  return getRoundData;
 };
 
 export default () => {

@@ -4,7 +4,7 @@ import getRandomInt from '../utils.js';
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const generatePrimeData = () => {
-  const roundData = () => {
+  const getRoundData = () => {
     const question = getRandomInt(0, 100);
 
     let answer = 'yes';
@@ -21,7 +21,7 @@ const generatePrimeData = () => {
     return { question, answer };
   };
 
-  return roundData;
+  return getRoundData;
 };
 
 export default () => {

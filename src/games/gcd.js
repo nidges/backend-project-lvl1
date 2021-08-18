@@ -4,7 +4,7 @@ import getRandomInt from '../utils.js';
 const description = 'Find the greatest common divisor of given numbers.';
 
 const generateGCDData = () => {
-  const roundData = () => {
+  const getRoundData = () => {
     let firstNumber = getRandomInt(0, 100);
     let secondNumber = getRandomInt(0, 100);
     const question = `${firstNumber} ${secondNumber}`;
@@ -20,7 +20,7 @@ const generateGCDData = () => {
     return { question, answer };
   };
 
-  return roundData;
+  return getRoundData;
 };
 
 export default () => {

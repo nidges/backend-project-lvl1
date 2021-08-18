@@ -4,7 +4,7 @@ import getRandomInt from '../utils.js';
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const generateEvenData = () => {
-  const roundData = () => {
+  const getRoundData = () => {
     const question = getRandomInt(0, 100);
 
     const answer = (question % 2 === 0) ? 'yes' : 'no';
@@ -12,7 +12,7 @@ const generateEvenData = () => {
     return { question, answer };
   };
 
-  return roundData;
+  return getRoundData;
 };
 
 export default () => {

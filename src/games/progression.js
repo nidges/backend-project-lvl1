@@ -4,7 +4,7 @@ import getRandomInt from '../utils.js';
 const description = 'What number is missing in the progression?';
 
 const generateProgressionData = () => {
-  const roundData = () => {
+  const getRoundData = () => {
     const numberOfProgressionElements = getRandomInt(5, 10);
 
     // 5 so it wouldn't be too difficult to count.
@@ -29,7 +29,7 @@ const generateProgressionData = () => {
     return { question, answer };
   };
 
-  return roundData;
+  return getRoundData;
 };
 
 export default () => {
