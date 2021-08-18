@@ -1,12 +1,10 @@
 import readlineSync from 'readline-sync';
-import getName from './cli.js';
 
 export default (gameData) => {
   console.log('Welcome to the Brain Games!');
-
-  const userName = getName();
-
+  const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}`);
+
   console.log(gameData.greeting);
 
   for (let i = 0; i < 3; i += 1) {
